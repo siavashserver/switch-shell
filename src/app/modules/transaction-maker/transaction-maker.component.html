@@ -1,0 +1,154 @@
+<div class="container">
+
+  <h3>Transaction Maker</h3>
+  <br/>
+
+  <mat-card>
+    <mat-card-header>
+      <h5>Connection Details</h5>
+    </mat-card-header>
+    <br/>
+    <mat-card-content>
+      <div class="row-3-col">
+        <mat-form-field>
+          <mat-label>IP</mat-label>
+          <input [matAutocomplete]="autoIP"
+                 aria-label="Number"
+                 matInput
+                 placeholder="Pick one"
+                 required
+                 type="text">
+          <mat-autocomplete #autoIP="matAutocomplete">
+            @for (ipOption of ipOptions; track ipOption) {
+              <mat-option [value]="ipOption">{{ ipOption }}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Port</mat-label>
+          <input [matAutocomplete]="autoPort"
+                 aria-label="Number"
+                 matInput
+                 placeholder="Pick one"
+                 required
+                 type="text">
+          <mat-autocomplete #autoPort="matAutocomplete">
+            @for (portOption of portOptions; track portOption) {
+              <mat-option [value]="portOption">{{ portOption }}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Protocol</mat-label>
+          <input [matAutocomplete]="autoProtocol"
+                 aria-label="Number"
+                 matInput
+                 placeholder="Pick one"
+                 required
+                 type="text">
+          <mat-autocomplete #autoProtocol="matAutocomplete">
+            @for (protocolOption of protocolOptions; track protocolOption) {
+              <mat-option [value]="protocolOption">{{ protocolOption }}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <br/>
+
+  <mat-card>
+    <mat-card-header>
+      <h5>Transaction Details</h5>
+    </mat-card-header>
+    <br/>
+    <mat-card-content>
+      <div class="row-3-col">
+        <mat-form-field>
+          <mat-label>Transaction</mat-label>
+          <input [matAutocomplete]="autoTransaction"
+                 aria-label="Number"
+                 matInput
+                 placeholder="Pick one"
+                 required
+                 type="text">
+          <mat-autocomplete #autoTransaction="matAutocomplete">
+            @for (transactionOption of transactionOptions; track transactionOption) {
+              <mat-option [value]="transactionOption">{{ transactionOption }}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Terminal Type</mat-label>
+          <input [matAutocomplete]="autoTerminalType"
+                 aria-label="Number"
+                 matInput
+                 placeholder="Pick one"
+                 required
+                 type="text">
+          <mat-autocomplete #autoTerminalType="matAutocomplete">
+            @for (terminalTypeOption of terminalTypeOptions; track terminalTypeOption) {
+              <mat-option [value]="terminalTypeOption">{{ terminalTypeOption }}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Terminal Name</mat-label>
+          <input [matAutocomplete]="autoTerminalName"
+                 aria-label="Number"
+                 matInput
+                 placeholder="Pick one"
+                 type="text">
+          <mat-autocomplete #autoTerminalName="matAutocomplete">
+            @for (terminalNameOption of terminalNameOptions; track terminalNameOption) {
+              <mat-option [value]="terminalNameOption">{{ terminalNameOption }}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+
+      <div class="row-3-col">
+        <mat-form-field>
+          <mat-label>Amount</mat-label>
+          <input matInput required>
+        </mat-form-field>
+        <mat-slide-toggle>OTP</mat-slide-toggle>
+        <mat-slide-toggle>Kahroba</mat-slide-toggle>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <br/>
+
+  <mat-card>
+    <mat-card-header>
+      <h5>Card Details</h5>
+    </mat-card-header>
+    <br/>
+    <mat-card-content>
+      <div class="row-3-col">
+        <mat-form-field>
+          <mat-label>Track2</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>CCV2</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Expire Date</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Second Card</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <br/>
+
+  <button disabled mat-flat-button>Submit</button>
+</div>

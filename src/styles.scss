@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/magenta-violet.css";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #362c2b !important;
+}
+
+.row-3-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0em 2em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . .";
+  padding-bottom: 1em;
+  align-items: center;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ".";
+
+  justify-items: center;
+
+  width: 100vw;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ".";
+
+  justify-items: center;
+
+  max-width: 80vw;
+  padding: 3em;
+}
